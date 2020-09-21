@@ -8,7 +8,7 @@ def get_apps():
     response = requests.get('https://api.steampowered.com/ISteamApps/GetAppList/v2/')
     return response.json()['applist']['apps']
 
-def dump_app_store_page(app_id, path):
+def dump_steamstore_page(app_id, path):
     response = requests.get('https://store.steampowered.com/app/%s' % app_id)
     if not response.status_code == 200:
         print('Unexpected status %d' % response.status_code)
@@ -24,6 +24,6 @@ if __name__ == '__main__':
     apps = [app for app in get_apps() if not str(app['appid']) in downloaded_app_ids]
     for app in tqdm(apps):
         try:
-            dump_app_store_page(app['appid'], path)
+            dump_steamstore_page(app['appid'], path)
         except:
             pass

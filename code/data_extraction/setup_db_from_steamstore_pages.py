@@ -10,7 +10,19 @@ from tqdm import tqdm
 
 def is_game_page(html_tree):
     is_in_all_games_category_xpath = "boolean(/html/body/div[contains(@class, 'responsive_page')]/div[@class='responsive_page_content']/div[@class='responsive_page_template_content']/div[contains(@class, 'game_page')]/div[@class='page_content_ctn']/div[contains(@class, 'game_title')]/div[@class='breadcrumbs']/div/a[1]/text() = 'All Games')"
-    return html_tree.xpath(is_in_all_games_category_xpath)
+    has_name_xpath = "boolean(/html/body/div[contains(@class, 'responsive_page')]/div[@class='responsive_page_content']/div[@class='responsive_page_template_content']/div[contains(@class, 'game_page')]/div[@class='page_content_ctn']/div[contains(@class, 'game_title')]//div[@class='apphub_AppName']/text())"
+    return html_tree.xpath(is_in_all_games_category_xpath) and html_tree.xpath(has_name_xpath)
+
+def extract_name(html_tree):
+    name_xpath = "/html/body/div[contains(@class, 'responsive_page')]/div[@class='responsive_page_content']/div[@class='responsive_page_template_content']/div[contains(@class, 'game_page')]/div[@class='page_content_ctn']/div[contains(@class, 'game_title')]//div[@class='apphub_AppName']/text()"
+    return html_tree.xpath(name_xpath)[0]
+
+def extract_category(html_tree):
+    category_xpath ="/html/body/div[contains(@class, 'responsive_page')]/div[@class='responsive_page_content']/div[@class='responsive_page_template_content']/div[contains(@class, 'game_page')]/div[@class='page_content_ctn']/div[contains(@class, 'game_title')]/div[@class='breadcrumbs']/div/a[2]/text()"
+    try:
+        return html_tree.xpath(category_xpath)[0]
+    except IndexError:
+        return 'unknown'
 
 def extract_game_tags(html_tree):
     game_tags_xpath = "/html/body/div[contains(@class, 'responsive_page')]/div[@class='responsive_page_content']/div[@class='responsive_page_template_content']/div[contains(@class, 'game_page')]/div[@class='page_content_ctn']/div[@class='block']//div[contains(@class, 'popular_tags')]/a/text()"
@@ -41,6 +53,8 @@ def extract_reviews(html_tree):
 def create_game_document(app_id, html_tree):
     return {
         'app_id': app_id,
+        'name': extract_name(html_tree),
+        'category': extract_category(html_tree),
         'tags': extract_game_tags(html_tree),
         'reviews': extract_reviews(html_tree)
     }
@@ -59,15 +73,19 @@ if __name__ == '__main__':
     db.table('games')
 
     game_documents = []
+    write_db_after = 1000
 
     for file in tqdm(files):
         with open(pages_path + file, encoding='utf8', mode='r') as page_file:
             page_code = page_file.read()
 
         html_tree = etree.fromstring(page_code, parser)
-
         if is_game_page(html_tree):
             game_document = create_game_document(file[:-5], html_tree)
             game_documents.append(game_document)
+
+            if len(game_documents) >= write_db_after:
+                db.table('games').insert_multiple(game_documents)
+                game_documents = []
 
     db.table('games').insert_multiple(game_documents)
