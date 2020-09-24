@@ -54,11 +54,6 @@ if __name__ == '__main__':
     db_path = sys.argv[2]
     db = TinyDB(db_path)
 
-    game_documents = []
-    write_db_after = 1000
-
-    Game = Query()
-
     game_documents = db.table('games').all()
     game_documents_dict = {game['app_id']: game for game in game_documents}
 
@@ -70,9 +65,7 @@ if __name__ == '__main__':
         app_id = file[:-5]
 
         if is_steam_game_page(html_tree):
-            playtracker_data = {'playtracker': get_playtracker_data(html_tree)}
             game_documents_dict[app_id]['playtracker'] = get_playtracker_data(html_tree)
-            print(game_documents_dict[app_id])
         else:
             pass
 
