@@ -1,0 +1,422 @@
+tag_Indie
+tag_Action
+tag_Casual
+tag_Adventure
+tag_Simulation
+tag_Strategy
+tag_RPG
+tag_Singleplayer
+tag_2D
+tag_Free to Play
+tag_Puzzle
+tag_Early Access
+tag_Atmospheric
+tag_Great Soundtrack
+tag_Fantasy
+tag_Multiplayer
+tag_Story Rich
+tag_Nudity
+tag_Violent
+tag_Sexual Content
+tag_VR
+tag_Pixel Graphics
+tag_Anime
+tag_Sports
+tag_Difficult
+tag_Gore
+tag_Sci-fi
+tag_Arcade
+tag_Funny
+tag_Retro
+tag_Platformer
+tag_Turn-Based
+tag_Shooter
+tag_Horror
+tag_First-Person
+tag_Female Protagonist
+tag_Cute
+tag_Racing
+tag_Visual Novel
+tag_Family Friendly
+tag_Co-op
+tag_Massively Multiplayer
+tag_Online Co-Op
+tag_Colorful
+tag_Exploration
+tag_Open World
+tag_Survival
+tag_Relaxing
+tag_FPS
+tag_Comedy
+tag_Point & Click
+tag_Party-Based RPG
+tag_Software
+tag_Space
+tag_Replay Value
+tag_Sandbox
+tag_Physics
+tag_Local Multiplayer
+tag_Mystery
+tag_Third Person
+tag_Design & Illustration
+tag_3D
+tag_Psychological Horror
+tag_Classic
+tag_Shoot 'Em Up
+tag_Side Scroller
+tag_Top-Down
+tag_Choices Matter
+tag_Tactical
+tag_Web Publishing
+tag_Management
+tag_Fast-Paced
+tag_Local Co-Op
+tag_Puzzle Platformer
+tag_Action-Adventure
+tag_Minimalist
+tag_Controller
+tag_Realistic
+tag_Dark
+tag_Building
+tag_Roguelike
+tag_Short
+tag_Turn-Based Strategy
+tag_RPGMaker
+tag_Mature
+tag_Stylized
+tag_Old School
+tag_Utilities
+tag_Zombies
+tag_Roguelite
+tag_Multiple Endings
+tag_Cartoony
+tag_PvP
+tag_Bullet Hell
+tag_JRPG
+tag_Survival Horror
+tag_Romance
+tag_Memes
+tag_Education
+tag_RTS
+tag_Hidden Object
+tag_Procedural Generation
+tag_Action RPG
+tag_Turn-Based Combat
+tag_Historical
+tag_Beautiful
+tag_War
+tag_Character Customization
+tag_2D Platformer
+tag_Choose Your Own Adventure
+tag_Dating Sim
+tag_Crafting
+tag_Top-Down Shooter
+tag_4 Player Local
+tag_Hand-drawn
+tag_Walking Simulator
+tag_Turn-Based Tactics
+tag_Hack and Slash
+tag_Magic
+tag_Fighting
+tag_Card Game
+tag_Medieval
+tag_Futuristic
+tag_Dungeon Crawler
+tag_Tower Defense
+tag_Text-Based
+tag_Music
+tag_Logic
+tag_Surreal
+tag_Isometric
+tag_3D Platformer
+tag_Dark Fantasy
+tag_Competitive
+tag_Post-apocalyptic
+tag_Stealth
+tag_Interactive Fiction
+tag_Resource Management
+tag_Military
+tag_Flight
+tag_Experimental
+tag_Cyberpunk
+tag_Cartoon
+tag_LGBTQ+
+tag_Robots
+tag_Base Building
+tag_Action Roguelike
+tag_Third-Person Shooter
+tag_Board Game
+tag_Abstract
+tag_Metroidvania
+tag_Aliens
+tag_Economy
+tag_Score Attack
+tag_Beat 'em up
+tag_1990's
+tag_Driving
+tag_Twin Stick Shooter
+tag_Perma Death
+tag_Hentai
+tag_Dark Humor
+tag_Detective
+tag_Drama
+tag_PvE
+tag_Animation & Modeling
+tag_World War II
+tag_Combat
+tag_NSFW
+tag_City Builder
+tag_Linear
+tag_Addictive
+tag_Moddable
+tag_Level Editor
+tag_Clicker
+tag_2.5D
+tag_Arena Shooter
+tag_Match 3
+tag_Narration
+tag_1980s
+tag_Real Time Tactics
+tag_Tactical RPG
+tag_Time Management
+tag_Rhythm
+tag_Psychological
+tag_Automobile Sim
+tag_Destruction
+tag_Tabletop
+tag_Game Development
+tag_Wargame
+tag_Strategy RPG
+tag_Real-Time
+tag_Mouse only
+tag_Character Action Game
+tag_Soundtrack
+tag_2D Fighter
+tag_Team-Based
+tag_Loot
+tag_Psychedelic
+tag_Grand Strategy
+tag_Emotional
+tag_Cult Classic
+tag_Runner
+tag_Parkour
+tag_Nature
+tag_Space Sim
+tag_Split Screen
+tag_Steampunk
+tag_Software Training
+tag_MMORPG
+tag_Thriller
+tag_Demons
+tag_Audio Production
+tag_Dungeons & Dragons
+tag_Lovecraftian
+tag_Dystopian
+tag_Blood
+tag_Investigation
+tag_Otome
+tag_Science
+tag_Mechs
+tag_Alternate History
+tag_Dark Comedy
+tag_Precision Platformer
+tag_Real-Time with Pause
+tag_Video Production
+tag_Crime
+tag_Tanks
+tag_CRPG
+tag_Voxel
+tag_Open World Survival Craft
+tag_Modern
+tag_Cinematic
+tag_Hex Grid
+tag_Touch-Friendly
+tag_Photo Editing
+tag_Comic Book
+tag_Dragons
+tag_Remake
+tag_Kickstarter
+tag_Immersive Sim
+tag_Supernatural
+tag_Pirates
+tag_Political
+tag_Conversation
+tag_Life Sim
+tag_GameMaker
+tag_Grid-Based Movement
+tag_Ninja
+tag_Noir
+tag_Cats
+tag_Card Battler
+tag_Philosophical
+tag_Souls-like
+tag_Inventory Management
+tag_Mythology
+tag_Deckbuilding
+tag_Swordplay
+tag_Parody
+tag_Nonlinear
+tag_Tutorial
+tag_Naval
+tag_Lore-Rich
+tag_Western
+tag_4X
+tag_eSports
+tag_Satire
+tag_Artificial Intelligence
+tag_Battle Royale
+tag_Dinosaurs
+tag_Underwater
+tag_Trains
+tag_Illuminati
+tag_Time Manipulation
+tag_Hacking
+tag_Colony Sim
+tag_Politics
+tag_Word Game
+tag_6DOF
+tag_Bullet Time
+tag_Time Attack
+tag_FMV
+tag_Time Travel
+tag_Episodic
+tag_Co-op Campaign
+tag_Agriculture
+tag_Trading Card Game
+tag_Programming
+tag_Trading
+tag_Cold War
+tag_MOBA
+tag_Minigames
+tag_Hunting
+tag_Gothic
+tag_Superhero
+tag_Fishing
+tag_Gun Customization
+tag_God Game
+tag_Vehicular Combat
+tag_Mining
+tag_America
+tag_3D Vision
+tag_Capitalism
+tag_Experience
+tag_Farming Sim
+tag_Vampire
+tag_Sokoban
+tag_Class-Based
+tag_Soccer
+tag_Crowdfunded
+tag_Martial Arts
+tag_Villain Protagonist
+tag_Mod
+tag_Mystery Dungeon
+tag_Political Sim
+tag_Football
+tag_Dog
+tag_Naval Combat
+tag_3D Fighter
+tag_Combat Racing
+tag_Silent Protagonist
+tag_Trivia
+tag_Dynamic Narration
+tag_Party
+tag_Asynchronous Multiplayer
+tag_Pinball
+tag_Solitaire
+tag_Spectacle fighter
+tag_Automation
+tag_Diplomacy
+tag_Epic
+tag_Assassin
+tag_On-Rails Shooter
+tag_Underground
+tag_Collectathon
+tag_Games Workshop
+tag_Typing
+tag_Music-Based Procedural Generation
+tag_Chess
+tag_Sniper
+tag_Idler
+tag_Sequel
+tag_Hero Shooter
+tag_World War I
+tag_Offroad
+tag_Unforgiving
+tag_Conspiracy
+tag_Party Game
+tag_Faith
+tag_Quick-Time Events
+tag_Golf
+tag_Traditional Roguelike
+tag_Sailing
+tag_Horses
+tag_Gambling
+tag_Archery
+tag_Snow
+tag_TrackIR
+tag_Rome
+tag_Warhammer 40K
+tag_Heist
+tag_Mars
+tag_Gaming
+tag_Roguelike Deckbuilder
+tag_Motorbike
+tag_Based On A Novel
+tag_Transportation
+tag_Werewolves
+tag_Mini Golf
+tag_Looter Shooter
+tag_Narrative
+tag_Transhumanism
+tag_Farming
+tag_Intentionally Awkward Controls
+tag_Bikes
+tag_Medical Sim
+tag_Basketball
+tag_Baseball
+tag_Boxing
+tag_LEGO
+tag_Immersive
+tag_Asymmetric VR
+tag_Movie
+tag_Submarine
+tag_Jet
+tag_Outbreak Sim
+tag_Tennis
+tag_Pool
+tag_Creature Collector
+tag_Auto Battler
+tag_Lemmings
+tag_Spelling
+tag_Foreign
+tag_Wrestling
+tag_Roguevania
+tag_Documentary
+tag_Nostalgia
+tag_Ambient
+tag_Voice Control
+tag_Hockey
+tag_Motocross
+tag_Spaceships
+tag_Skating
+tag_360 Video
+tag_Electronic Music
+tag_Cycling
+tag_Skateboarding
+tag_Bowling
+tag_Steam Machine
+tag_Well-Written
+tag_BMX
+tag_Social Deduction
+tag_Electronic
+tag_Skiing
+tag_Instrumental Music
+tag_ATV
+tag_Rock Music
+tag_Snowboarding
+tag_Hardware
+tag_Benchmark
+tag_Feature Film
+tag_Reboot
+tag_Action RTS
+tag_Breathtaking
