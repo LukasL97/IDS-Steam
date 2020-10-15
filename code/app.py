@@ -104,7 +104,7 @@ class AppFrame(wx.Frame):
         self.Show()
 
     def get_model(self):
-        return joblib.load('../trained_model.pkl')
+        return joblib.load('C:/Users/Annalisa/IDS-Steam//trained_model.pkl')
 
     def select_genre(self, s):
         self.active_genre = self.genres[self.genre_menu.GetSelection()]
@@ -257,7 +257,7 @@ class AppFrame(wx.Frame):
 
 
 def get_tags(limit=100):
-    with open('../tags_ordered.txt', mode='r', encoding='utf8') as tags_file:
+    with open('C:/Users/Annalisa/IDS-Steam/tags_ordered.txt', mode='r', encoding='utf8') as tags_file:
         tags = tags_file.read().split('\n')
     tags = [t[4:] for t in tags]
     return tags[:limit]
@@ -286,7 +286,7 @@ def get_genres():
 class FeatureIndexResolver(object):
 
     def __init__(self):
-        with open('../ausgabe_namen_x.csv', mode='r', encoding='utf8') as features_file:
+        with open('C:/Users/Annalisa/IDS-Steam//ausgabe_namen_x.csv', mode='r', encoding='utf8') as features_file:
             features = features_file.read().split(',')
         features = [f.strip()[1:-1] for f in features]
         print(features)
