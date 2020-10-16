@@ -1,9 +1,7 @@
-
-import random as rn
-
 import joblib
 import numpy as np
 import wx
+from wx.lib.buttons import GenButton
 from wx.adv import BitmapComboBox
 
 
@@ -58,7 +56,7 @@ class AppFrame(wx.Frame):
 
         self.tag_btns = {}
         for tag in self.tags:
-            tag_btn = wx.Button(panel, label=tag, size=(150, 30))
+            tag_btn = GenButton(panel, label=tag, size=(150, 30))
             tag_btn.SetFont(self.normal_font)
             tag_btn.Bind(wx.EVT_BUTTON, self.toggle_tag_btn(tag_btn))
             tag_btn_grid_sizer.Add(tag_btn, 0, wx.ALL | wx.CENTER, 5)
@@ -70,14 +68,14 @@ class AppFrame(wx.Frame):
 
         price_grid_sizer = wx.GridSizer(3, 0, 0)
         sizer.Add(price_grid_sizer)
-        self.price_down_btn = wx.Button(panel, label='-%d€' % self.price_step)
+        self.price_down_btn = GenButton(panel, label='-%d€' % self.price_step)
         self.price_down_btn.SetFont(self.bold_font)
         self.price_down_btn.Bind(wx.EVT_BUTTON, self.decrease_price)
         price_grid_sizer.Add(self.price_down_btn, 0, wx.ALL | wx.EXPAND, 5)
         self.active_price_text = wx.StaticText(panel, label=('%d€' % self.active_price).rjust(4))
         self.active_price_text.SetFont(wx.Font(16, wx.DEFAULT, wx.NORMAL, wx.BOLD))
         price_grid_sizer.Add(self.active_price_text, 0, wx.ALL | wx.EXPAND, 5)
-        self.price_up_btn = wx.Button(panel, label='+%d€' % self.price_step)
+        self.price_up_btn = GenButton(panel, label='+%d€' % self.price_step)
         self.price_up_btn.SetFont(self.bold_font)
         self.price_up_btn.Bind(wx.EVT_BUTTON, self.increase_price)
         price_grid_sizer.Add(self.price_up_btn, 0, wx.ALL | wx.EXPAND, 5)
@@ -88,14 +86,14 @@ class AppFrame(wx.Frame):
 
         years_grid_sizer = wx.GridSizer(3, 0, 0)
         sizer.Add(years_grid_sizer)
-        self.years_down_btn = wx.Button(panel, label='-%d' % self.years_since_release_step)
+        self.years_down_btn = GenButton(panel, label='-%d' % self.years_since_release_step)
         self.years_down_btn.SetFont(self.bold_font)
         self.years_down_btn.Bind(wx.EVT_BUTTON, self.decrease_years_since_release)
         years_grid_sizer.Add(self.years_down_btn, 0, wx.ALL | wx.EXPAND, 5)
         self.active_years_since_release_text = wx.StaticText(panel, label=('%d' % self.active_years_since_release).rjust(4))
         self.active_years_since_release_text.SetFont(wx.Font(16, wx.DEFAULT, wx.NORMAL, wx.BOLD))
         years_grid_sizer.Add(self.active_years_since_release_text, 0, wx.ALL | wx.EXPAND, 5)
-        self.years_up_btn = wx.Button(panel, label='+%d' % self.years_since_release_step)
+        self.years_up_btn = GenButton(panel, label='+%d' % self.years_since_release_step)
         self.years_up_btn.SetFont(self.bold_font)
         self.years_up_btn.Bind(wx.EVT_BUTTON, self.increase_years_since_release)
         years_grid_sizer.Add(self.years_up_btn, 0, wx.ALL | wx.EXPAND, 5)
@@ -104,7 +102,7 @@ class AppFrame(wx.Frame):
         self.Show()
 
     def get_model(self):
-        return joblib.load('C:/Users/Annalisa/IDS-Steam//trained_model.pkl')
+        return joblib.load('trained_model.pkl')
 
     def select_genre(self, s):
         self.active_genre = self.genres[self.genre_menu.GetSelection()]
@@ -257,7 +255,7 @@ class AppFrame(wx.Frame):
 
 
 def get_tags(limit=100):
-    with open('C:/Users/Annalisa/IDS-Steam/tags_ordered.txt', mode='r', encoding='utf8') as tags_file:
+    with open('tags_ordered.txt', mode='r', encoding='utf8') as tags_file:
         tags = tags_file.read().split('\n')
     tags = [t[4:] for t in tags]
     return tags[:limit]
@@ -286,10 +284,9 @@ def get_genres():
 class FeatureIndexResolver(object):
 
     def __init__(self):
-        with open('C:/Users/Annalisa/IDS-Steam//ausgabe_namen_x.csv', mode='r', encoding='utf8') as features_file:
+        with open('ausgabe_namen_x.csv', mode='r', encoding='utf8') as features_file:
             features = features_file.read().split(',')
         features = [f.strip()[1:-1] for f in features]
-        print(features)
         self.features = {f: i for i, f in enumerate(features)}
 
     def num_features(self):
