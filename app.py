@@ -294,7 +294,7 @@ def get_genres():
 class FeatureIndexResolver(object):
 
     def __init__(self):
-        with open('ausgabe_namen_x.csv', mode='r', encoding='utf8') as features_file:
+        with open('categories_ordered.csv', mode='r', encoding='utf8') as features_file:
             features = features_file.read().split(',')
         features = [f.strip()[1:-1] for f in features]
         self.features = {f: i for i, f in enumerate(features)}
