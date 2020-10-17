@@ -1,14 +1,18 @@
+from argparse import ArgumentParser
+
 import joblib
 import numpy as np
 import wx
-from wx.lib.buttons import GenButton
 from wx.adv import BitmapComboBox
+from wx.lib.buttons import GenButton
 
 
 class AppFrame(wx.Frame):
 
-    def __init__(self, tags, genres, fir):
+    def __init__(self, tags, genres, fir, force_color_update=False):
         super().__init__(parent=None, title='Create a successful video game!', size=(1600, 800))
+
+        self.force_color_update = force_color_update
 
         self.model = self.get_model()
 
@@ -246,12 +250,18 @@ class AppFrame(wx.Frame):
 
         for (tag, tag_btn), (r, g, b) in zip(self.tag_btns.items(), tag_estimates_rgb):
             tag_btn.SetBackgroundColour(wx.Colour(r, g, b))
+            if self.force_color_update:
+                tag_btn.SetFocus()
 
         for price_btn, (r, g, b) in zip([self.price_down_btn, self.price_up_btn], price_estimates_rgb):
             price_btn.SetBackgroundColour(wx.Colour(r, g, b))
+            if self.force_color_update:
+                price_btn.SetFocus()
 
         for years_btn, (r, g, b) in zip([self.years_down_btn, self.years_up_btn], years_since_release_estimates_rgb):
             years_btn.SetBackgroundColour(wx.Colour(r, g, b))
+            if self.force_color_update:
+                years_btn.SetFocus()
 
 
 def get_tags(limit=100):
@@ -306,9 +316,14 @@ class FeatureIndexResolver(object):
 
 
 if __name__ == '__main__':
+
+    parser = ArgumentParser()
+    parser.add_argument('-f', action='store_true', default=False)
+    args = parser.parse_args()
+
     app = wx.App()
     tags = get_tags(100)
     genres = get_genres()
     fir = FeatureIndexResolver()
-    frame = AppFrame(tags, genres, fir)
+    frame = AppFrame(tags, genres, fir, args.f)
     app.MainLoop()

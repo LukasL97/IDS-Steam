@@ -48,6 +48,12 @@ The result should look like that:
 
 There might be some visual differences depending on your OS. This screenshot was taken under Ubuntu 20.04.1 LTS.
 
+If you observe that the button colors do not change (except for the one button pressed), try running the app as follows:
+
+`python app.py -f`
+
+This forces a color change for each button.
+
 ### How to use the app
 
 Select a category from the drop down menu. Select tags by clicking the according buttons.
